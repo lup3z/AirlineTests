@@ -101,7 +101,7 @@ public class AirlinesTest {
                         .get(url +"/flights/3")
                 .then()
                         .statusCode(200)
-                        .body( "passengers", hasItems("lucas"))
+                        .body( "passengers", hasItems("carlos", "lucas"))
                         .extract().body().asString();
         System.out.println(respuesta);
     }

@@ -20,7 +20,7 @@ public class RestApi {
                         .post(url +"projects.xml")
                 .then()
                         .statusCode(201)
-                        .body("<name>", equalTo("marcosss"))
+//                        .body("name", equalTo("marcosss"))
                         .extract().body().asString();
         System.out.println(respuesta);
     }

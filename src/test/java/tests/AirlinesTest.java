@@ -5,7 +5,7 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.*;
 
 public class AirlinesTest {
 
@@ -54,7 +54,7 @@ public class AirlinesTest {
                         .get(url +"/reservations/1")
                 .then()
                         .statusCode(200)
-                        .body("passenger", equalTo("carlos"))
+                        .body("passenger", equalTo("rodrige"))
                         .extract().body().asString();
         System.out.println(respuesta);
     }
@@ -87,6 +87,7 @@ public class AirlinesTest {
                         .get(url +"/reservations/7785")
                 .then()
                         .statusCode(422)
+                        .body("error", equalTo("Invalid reservation_id"))
                         .extract().body().asString();
         System.out.println(respuesta);
     }
@@ -100,7 +101,7 @@ public class AirlinesTest {
                         .get(url +"/flights/3")
                 .then()
                         .statusCode(200)
-                        //.body( get List<passengers> pax, equalTo("lucas"))
+                        .body( "passengers", hasItems("carlos", "lucas"))
                         .extract().body().asString();
         System.out.println(respuesta);
     }

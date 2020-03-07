@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03e4bb9a-4ce4-4b37-9950-7b17f68678ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/RestApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pojo/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pojo/ReservaInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AirlinesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AirlinesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/AirlinesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/AirlinesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RestApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RestApi.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1YUlqJgHCfRuGJ3wZClNOtZk2Ro" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -48,8 +51,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="TestNG.RestApi.crearUnProyecto">
-    <configuration name="AirlinesTest.consultaReservaInexistente" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AirlinesTest.crearReserva">
+    <configuration name="AirlinesTest.consultaReservaExistente" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
@@ -59,7 +62,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.AirlinesTest" />
-      <option name="METHOD_NAME" value="consultaReservaInexistente" />
+      <option name="METHOD_NAME" value="consultaReservaExistente" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -78,6 +81,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.AirlinesTest" />
       <option name="METHOD_NAME" value="consultaUnaReservaValida" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AirlinesTest.crearReserva" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AirlinesTest" />
+      <option name="METHOD_NAME" value="crearReserva" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -121,31 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestApi.crearUnVuelo" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RestApi" />
-      <option name="METHOD_NAME" value="crearUnVuelo" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RestApi.crearUnProyecto" />
-        <item itemvalue="TestNG.RestApi.crearUnVuelo" />
-        <item itemvalue="TestNG.AirlinesTest.consultaUnaReservaValida" />
-        <item itemvalue="TestNG.AirlinesTest.consultaReservaInexistente" />
+        <item itemvalue="TestNG.AirlinesTest.crearReserva" />
         <item itemvalue="TestNG.AirlinesTest.crearUnVuelo" />
+        <item itemvalue="TestNG.AirlinesTest.consultaReservaExistente" />
+        <item itemvalue="TestNG.RestApi.crearUnProyecto" />
+        <item itemvalue="TestNG.AirlinesTest.consultaUnaReservaValida" />
       </list>
     </recent_temporary>
   </component>
@@ -163,38 +166,46 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="257" key="GridCell.Tab.0.bottom" timestamp="1583283793969">
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1583611857928">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="257" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583283793969" />
-    <state width="1323" height="257" key="GridCell.Tab.0.center" timestamp="1583283793969">
+    <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583611857928" />
+    <state width="423" height="458" key="DebuggerActiveHint" timestamp="1583611911642">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="257" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583283793969" />
-    <state width="1323" height="257" key="GridCell.Tab.0.left" timestamp="1583283793968">
+    <state width="423" height="458" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1583611911642" />
+    <state width="1323" height="242" key="GridCell.Tab.0.bottom" timestamp="1583611938011">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="257" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583283793968" />
-    <state width="1323" height="257" key="GridCell.Tab.0.right" timestamp="1583283793969">
+    <state width="1323" height="242" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583611938011" />
+    <state width="1323" height="242" key="GridCell.Tab.0.center" timestamp="1583611938011">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="257" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583283793969" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1583283607542">
+    <state width="1323" height="242" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583611938011" />
+    <state width="1323" height="242" key="GridCell.Tab.0.left" timestamp="1583611938011">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583283607542" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1583283607541">
+    <state width="1323" height="242" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583611938011" />
+    <state width="1323" height="242" key="GridCell.Tab.0.right" timestamp="1583611938011">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1583283607541" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1583283607541">
+    <state width="1323" height="242" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583611938011" />
+    <state width="1323" height="295" key="GridCell.Tab.1.bottom" timestamp="1583611937357">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1583283607541" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1583283607542">
+    <state width="1323" height="295" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583611937357" />
+    <state width="1323" height="295" key="GridCell.Tab.1.center" timestamp="1583611937357">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1583283607542" />
+    <state width="1323" height="295" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1583611937357" />
+    <state width="1323" height="295" key="GridCell.Tab.1.left" timestamp="1583611937357">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="295" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1583611937357" />
+    <state width="1323" height="295" key="GridCell.Tab.1.right" timestamp="1583611937357">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="295" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1583611937357" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1583005858820">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -204,54 +215,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/AirlinesTest.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/AirlinesTest.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/AirlinesTest.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/RestApi.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/AirlinesTest.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

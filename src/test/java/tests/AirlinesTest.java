@@ -1,7 +1,11 @@
 package tests;
+import Pojo.Reserva;
+import Pojo.ReservaInfo;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
@@ -29,18 +33,19 @@ public class AirlinesTest {
 
     @Test
     public void crearReserva(){
-        Integer respuesta =
+        /*Map <String, Object> cuerpo = new HashMap  <String, Object>();
+        cuerpo.put("flight_id", 8);
+        cuerpo.put("name","Marcos");*/
+
+        ReservaInfo respuesta =
         given()
                 .header("Content-Type", "application/json")
-                .body("{\n" +
-                        "\t\"flight_id\":\"4\",\n" +
-                        "\t\"name\":\"rodrige\"\n" +
-                        "}")
+                .body(new Reserva(8, "carlos"))
         .when()
                 .post(url + "/reservation/new")
         .then()
                 .statusCode(200)
-                .extract().path("reservation_id");
+                .extract().body().as(ReservaInfo.class);
         System.out.println(respuesta);
     }
 
@@ -51,24 +56,24 @@ public class AirlinesTest {
                         .header("Content-Type", "application/json")
 
                 .when()
-                        .get(url +"/reservations/1")
+                        .get(url +"/reservations/7")
                 .then()
                         .statusCode(200)
-                        .body("passenger", equalTo("rodrige"))
+                        .body("passenger", equalTo("Omar"))
                         .extract().body().asString();
         System.out.println(respuesta);
     }
 
     @Test
     public void crearUnVuelo(){
+        Map <String, Object> cuerpo = new HashMap  <String, Object>();
+        cuerpo.put("origin", "Buenos Aires");
+        cuerpo.put("destination","Marruecos");
+        cuerpo.put("duration",153);
         String respuesta =
                 given()
                         .header("Content-Type", "application/json")
-                        .body("{\n" +
-                                "\t\"origin\":\"buenos aires\",\n" +
-                                "\t\"destination\":\"Marruecos\",\n" +
-                                "\t\"duration\":\"222\"\n" +
-                                "}")
+                        .body(cuerpo)
                 .when()
                         .post(url +"/flight/new")
                 .then()
